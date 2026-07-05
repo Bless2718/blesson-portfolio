@@ -1,3 +1,4 @@
+import BackgroundGlow from "@/components/effects/BackgroundGlow";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -31,12 +32,14 @@ export const metadata: Metadata = {
     "Data Analyst",
     "Python",
     "Machine Learning",
-    "Portfolio",
-    "AI",
+    "Deep Learning",
     "Analytics",
     "SQL",
+    "Power BI",
     "FastAPI",
+    "Generative AI",
     "MLOps",
+    "Portfolio",
   ],
 
   authors: [
@@ -48,17 +51,20 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
 
   openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
+    type: "website",
+    locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
     images: [
       {
         url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
 
   twitter: {
@@ -88,6 +94,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
       >
+         <BackgroundGlow />
         {children}
       </body>
     </html>

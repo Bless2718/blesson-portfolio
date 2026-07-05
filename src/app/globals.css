@@ -186,29 +186,31 @@ body::before {
 
 position:absolute;
 
-width:900px;
+width:950px;
 
-height:900px;
+height:950px;
 
 left:50%;
 
-top:45%;
+top:42%;
 
 transform:translate(-50%,-50%);
 
 border-radius:9999px;
 
-background:radial-gradient(
-circle,
-rgba(168,85,247,.22),
-transparent 70%
+background:
+radial-gradient(
+  circle,
+  rgba(168,85,247,.32),
+  transparent 72%
 );
 
-filter:blur(140px);
+filter:blur(160px);
 
-z-index:-1;
+opacity:.55;
 
 pointer-events:none;
+z-index:-1;
 
 }
 
@@ -236,13 +238,12 @@ position:relative;
 
 background:
 linear-gradient(
-90deg,
-#ffffff,
-#d8b4fe,
-#a855f7
+180deg,
+#ffffff 0%,
+#f5f3ff 40%,
+#d8b4fe 70%,
+#a855f7 100%
 );
-
-background-size:200% auto;
 
 -webkit-background-clip:text;
 
@@ -269,4 +270,125 @@ padding-left:2rem;
 
 padding-right:2rem;
 
+}
+.section-title{
+
+font-size:3rem;
+
+font-weight:700;
+
+letter-spacing:-.04em;
+
+line-height:1.1;
+
+}
+.section-description{
+
+font-size:1.125rem;
+
+color:#a1a1aa;
+
+line-height:1.9;
+
+max-width:700px;
+
+}
+html{
+
+scroll-behavior:smooth;
+
+}
+/* ============================= */
+/* Animated Background Glows */
+/* ============================= */
+
+.background-glow {
+  position: fixed;
+
+  border-radius: 9999px;
+
+  filter: blur(120px);
+
+  pointer-events: none;
+
+  z-index: -3;
+
+  opacity: 0.25;
+}
+
+.background-glow-1 {
+  width: 700px;
+  height: 700px;
+
+  background: rgba(139, 92, 246, 0.18);
+
+  top: -180px;
+  left: -180px;
+
+  animation: floatOne 24s ease-in-out infinite;
+}
+
+.background-glow-2 {
+  width: 600px;
+  height: 600px;
+
+  background: rgba(168, 85, 247, 0.14);
+
+  right: -150px;
+  top: 30%;
+
+  animation: floatTwo 28s ease-in-out infinite;
+}
+
+.background-glow-3 {
+  width: 750px;
+  height: 750px;
+
+  background: rgba(124, 58, 237, 0.12);
+
+  bottom: -250px;
+  left: 30%;
+
+  animation: floatThree 32s ease-in-out infinite;
+}
+@keyframes floatOne {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(120px, 80px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-100px, 100px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatThree {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(80px, -120px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
