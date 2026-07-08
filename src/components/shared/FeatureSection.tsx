@@ -63,8 +63,12 @@ export default function FeatureSection({
             {eyebrow}
           </p>
 
-          <h2 className="mt-6 text-5xl font-bold leading-tight md:text-7xl whitespace-pre-line">
-            {title}
+          <h2 className="mt-6 text-5xl font-bold leading-tight md:text-7xl">
+            {title.split("\n").map((line) => (
+                <span key={line} className="block">
+                    {line}
+                </span>
+                ))}
           </h2>
 
           <h3 className="mt-8 text-2xl font-semibold">

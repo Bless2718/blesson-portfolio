@@ -1,3 +1,4 @@
+import FeaturedProject from "@/components/sections/FeaturedProject";
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import ScrollProgress from "@/components/effects/ScrollProgress";
@@ -12,7 +13,10 @@ export default function Home() {
 
       <Hero />
       <About />
-
+      <FeaturedProject />
+      {/* Skills */}
+      {/* Projects */}
+      {/* Contact */}
     </main>
   );
 }
