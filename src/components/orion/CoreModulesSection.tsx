@@ -1,8 +1,9 @@
 import Container from "@/components/layout/Container";
 import { orion } from "@/data/orion";
-
+import Reveal from "./ui/Reveal";
 export default function CoreModulesSection() {
   return (
+    <Reveal>
     <section className="bg-white py-32 text-zinc-900">
       <Container>
         <div className="mb-20 text-center">
@@ -74,5 +75,6 @@ export default function CoreModulesSection() {
         </div>
       </Container>
     </section>
+    </Reveal>
   );
 }

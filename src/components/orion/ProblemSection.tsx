@@ -1,8 +1,9 @@
 import Container from "@/components/layout/Container";
 import { orion } from "@/data/orion";
-
+import Reveal from "./ui/Reveal";
 export default function ProblemSection() {
   return (
+    <Reveal>
     <section className="bg-white py-32 text-zinc-900">
       <Container>
         <div className="grid items-center gap-20 lg:grid-cols-2">
@@ -62,5 +63,6 @@ export default function ProblemSection() {
         </div>
       </Container>
     </section>
+    </Reveal>
   );
 }

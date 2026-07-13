@@ -1,27 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
-interface AnimatedSectionProps {
-  children: React.ReactNode;
+interface RevealProps {
+  children: ReactNode;
+  delay?: number;
   className?: string;
 }
 
-export default function AnimatedSection({
+export default function Reveal({
   children,
+  delay = 0,
   className = "",
-}: AnimatedSectionProps) {
+}: RevealProps) {
   return (
-    <motion.section
+    <motion.div
       className={className}
       initial={{
         opacity: 0,
         y: 40,
-        filter: "blur(8px)",
+        scale: 0.96,
+        filter: "blur(10px)",
       }}
       whileInView={{
         opacity: 1,
         y: 0,
+        scale: 1,
         filter: "blur(0px)",
       }}
       viewport={{
@@ -30,10 +35,17 @@ export default function AnimatedSection({
       }}
       transition={{
         duration: 0.8,
-        ease: [0.25, 1, 0.5, 1],
+        delay,
+        type: "spring",
+        stiffness: 80,
+        damping: 18,
+        mass: 0.8,
+      }}
+      style={{
+        willChange: "transform, opacity, filter",
       }}
     >
       {children}
-    </motion.section>
+    </motion.div>
   );
 }
