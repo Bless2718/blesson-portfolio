@@ -1,6 +1,6 @@
 "use client";
 
-import { Handle, Position, NodeProps } from "@xyflow/react";
+import { Handle, Position, type Node, type NodeProps } from "@xyflow/react";
 import {
   User,
   ShieldCheck,
@@ -13,15 +13,17 @@ import {
   BarChart3,
 } from "lucide-react";
 
-type OrionNodeData = {
+export type OrionNodeData = {
   title: string;
   responsibilities: string[];
   variant?: "default" | "core";
 };
 
+export type OrionNodeType = Node<OrionNodeData, "orionNode">;
+
 export default function OrionNode({
   data,
-}: NodeProps<OrionNodeData>) {
+}: NodeProps<OrionNodeType>) {
   const isCore = data.variant === "core";
 
   const getAccent = () => {
