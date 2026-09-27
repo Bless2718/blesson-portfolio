@@ -1,48 +1,42 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import CursorGlowText from "@/components/effects/CursorGlowText";
 
-import { orion } from "@/data/orion";
+import { sentinel } from "@/data/sentinel";
 import AcademicPills from "@/components/education/AcademicPills";
 import ArchitectureCanvas from "@/components/architecture/ArchitectureCanvas";
 
 export default function FeaturedProject() {
   return (
     <section className="section bg-[#050508] border-y border-white/5">
-
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-20 px-6 lg:flex-row lg:px-10">
-
-        {/* LEFT SIDE */}
-
         <div className="flex-1">
-
           <p className="mb-4 text-sm uppercase tracking-[0.35em] text-blue-400">
             Featured Project
           </p>
 
-          <CursorGlowText 
-          className="text-6xl lg:text-8xl leading-none"
-          >
-            {orion.hero.title}
-            </CursorGlowText>
+          <CursorGlowText className="text-6xl lg:text-8xl leading-none">
+            {sentinel.hero.title}
+          </CursorGlowText>
 
           <h3 className="mt-4 text-2xl font-semibold text-zinc-300">
-            {orion.hero.subtitle}
+            {sentinel.hero.subtitle}
           </h3>
 
           <p className="mt-8 text-lg leading-9 text-zinc-400">
-            {orion.hero.description}
+            {sentinel.hero.description}
           </p>
 
           <AcademicPills
             title="Technology Stack"
-            items={orion.builtWith}
+            items={sentinel.builtWith}
           />
 
-          <Link
-            href="/orion"
+          <a
+            href={sentinel.hero.github}
+            target="_blank"
+            rel="noreferrer"
             className="
               mt-12
               inline-flex
@@ -62,23 +56,16 @@ export default function FeaturedProject() {
               hover:bg-blue-500/20
             "
           >
-            View Case Study
+            View Project
 
             <ArrowRight size={18} />
-          </Link>
-
+          </a>
         </div>
-
-        {/* RIGHT SIDE */}
 
         <div className="flex flex-1 justify-center">
-
           <ArchitectureCanvas />
-
         </div>
-
       </div>
-
     </section>
   );
 }
