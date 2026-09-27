@@ -15,7 +15,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-bold tracking-tight transition-colors hover:text-violet-300"
           >
-            BS.
+            Blesson Samuel
           </Link>
 
           <div className="hidden md:flex items-center gap-12">
