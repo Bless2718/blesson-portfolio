@@ -4,7 +4,6 @@ import {
   Background,
   Controls,
   ReactFlow,
-  type NodeTypes,
 } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
@@ -16,7 +15,7 @@ import OrionEdge from "./OrionEdge";
 
 const nodeTypes = {
   orionNode: OrionNode,
-} satisfies NodeTypes;
+} as any;
 
 const edgeTypes = {
   orion: OrionEdge,
