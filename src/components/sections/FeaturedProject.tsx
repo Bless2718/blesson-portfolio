@@ -34,7 +34,7 @@ export default function FeaturedProject() {
           />
 
           <a
-            href={sentinel.hero.github}
+            href="https://sentinel-ai-v2-4w54.onrender.com/"
             target="_blank"
             rel="noreferrer"
             className="
@@ -56,7 +56,7 @@ export default function FeaturedProject() {
               hover:bg-blue-500/20
             "
           >
-            View Project
+            Launch Sentinel AI
 
             <ArrowRight size={18} />
           </a>
