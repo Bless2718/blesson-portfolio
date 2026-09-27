@@ -1,8 +1,8 @@
 "use client";
 
 import {
+  Code2,
   Download,
-  Github,
   Linkedin,
   Mail,
   MapPin,
@@ -128,7 +128,7 @@ export default function Contact() {
                   className="flex items-center justify-between rounded-2xl border border-white/10 px-5 py-4 text-zinc-200 transition-all hover:border-violet-400/30 hover:bg-violet-500/10"
                 >
                   <span className="flex items-center gap-3">
-                    <Github size={19} />
+                    <Code2 size={19} />
                     GitHub
                   </span>
                   <span>↗</span>
