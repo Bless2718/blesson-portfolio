@@ -1,8 +1,9 @@
 import Container from "@/components/layout/Container";
 import ArchitectureCanvas from "./architecture/ArchitectureCanvas";
-
+import Reveal from "./ui/Reveal";
 export default function ArchitectureSection() {
   return (
+    <Reveal>
     <section className="bg-[#050508] py-36">
       <Container>
         <div className="mb-20 text-center">
@@ -24,5 +25,6 @@ export default function ArchitectureSection() {
         <ArchitectureCanvas />
       </Container>
     </section>
+    </Reveal>
   );
 }

@@ -8,6 +8,7 @@ import TechnologyStackSection from "@/components/orion/TechnologyStackSection";
 import DevelopmentTimelineSection from "@/components/orion/DevelopmentTimelineSection";
 import FutureRoadmapSection from "@/components/orion/FutureRoadmapSection";
 import ProjectCTASection from "@/components/orion/ProjectCTASection";
+
 export default function OrionPage() {
   return (
     <main className="bg-background text-foreground">

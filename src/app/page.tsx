@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import ScrollProgress from "@/components/effects/ScrollProgress";
 import About from "@/components/sections/About";
+import Certifications from "@/components/sections/Certifications";
 export default function Home() {
   return (
     <main className="bg-background text-foreground">
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <FeaturedProject />
+      <Certifications />
       {/* Skills */}
       {/* Projects */}
       {/* Contact */}
