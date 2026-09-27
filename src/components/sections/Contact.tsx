@@ -3,7 +3,7 @@
 import {
   Code2,
   Download,
-  Linkedin,
+  ExternalLink,
   Mail,
   MapPin,
   Phone,
@@ -115,7 +115,7 @@ export default function Contact() {
                   className="flex items-center justify-between rounded-2xl border border-white/10 px-5 py-4 text-zinc-200 transition-all hover:border-violet-400/30 hover:bg-violet-500/10"
                 >
                   <span className="flex items-center gap-3">
-                    <Linkedin size={19} />
+                    <ExternalLink size={19} />
                     LinkedIn
                   </span>
                   <span>↗</span>
