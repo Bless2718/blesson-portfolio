@@ -1,6 +1,6 @@
-import { Node } from "@xyflow/react";
+import type { OrionNodeType } from "./OrionNode";
 
-export const initialNodes: Node[] = [
+export const initialNodes: OrionNodeType[] = [
   {
     id: "users",
     type: "orionNode",
