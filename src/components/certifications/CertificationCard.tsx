@@ -30,60 +30,66 @@ export default function CertificationCard({
   credential,
   delay = 0,
 }: CertificationCardProps) {
+  const hasCredential = Boolean(credential && credential !== "#");
+
+  const preview = (
+    <div className="relative block overflow-hidden">
+      <Image
+        src={image}
+        alt={title}
+        width={700}
+        height={500}
+        className="
+          h-56
+          w-full
+          object-cover
+          transition-transform
+          duration-700
+          group-hover:scale-105
+        "
+      />
+
+      {hasCredential && (
+        <div
+          className="
+            absolute
+            inset-0
+            flex
+            items-center
+            justify-center
+            bg-black/45
+            opacity-0
+            transition-opacity
+            duration-500
+            group-hover:opacity-100
+          "
+        >
+          <span className="rounded-full bg-white px-5 py-2 font-semibold text-black">
+            View
+          </span>
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <Reveal delay={delay}>
       <GlassCard className="group relative h-full overflow-hidden p-0">
 
-        {/* Glow */}
-
         <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-blue-500/10 blur-[90px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        {/* Certificate Preview */}
-
-        <a
-          href={credential}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative block overflow-hidden"
-        >
-          <Image
-            src={image}
-            alt={title}
-            width={700}
-            height={500}
-            className="
-              h-56
-              w-full
-              object-cover
-              transition-transform
-              duration-700
-              group-hover:scale-105
-            "
-          />
-
-          {/* Overlay */}
-
-          <div
-            className="
-              absolute
-              inset-0
-              flex
-              items-center
-              justify-center
-              bg-black/45
-              opacity-0
-              transition-opacity
-              duration-500
-              group-hover:opacity-100
-            "
+        {hasCredential ? (
+          <a
+            href={credential}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
           >
-            <span className="rounded-full bg-white px-5 py-2 font-semibold text-black">
-              View
-            </span>
-          </div>
-        </a>
-
-        {/* Content */}
+            {preview}
+          </a>
+        ) : (
+          preview
+        )}
 
         <div className="p-7">
 
@@ -105,34 +111,35 @@ export default function CertificationCard({
               size={16}
               className="text-blue-400"
             />
-
             {duration}
           </div>
 
-          <a
-            href={credential}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              group/link
-              mt-8
-              inline-flex
-              items-center
-              gap-2
-              font-semibold
-              text-blue-400
-              transition-colors
-              duration-300
-              hover:text-blue-300
-            "
-          >
-            View Credential
+          {hasCredential && (
+            <a
+              href={credential}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group/link
+                mt-8
+                inline-flex
+                items-center
+                gap-2
+                font-semibold
+                text-blue-400
+                transition-colors
+                duration-300
+                hover:text-blue-300
+              "
+            >
+              View Credential
 
-            <ArrowRight
-              size={16}
-              className="transition-transform duration-300 group-hover/link:translate-x-1"
-            />
-          </a>
+              <ArrowRight
+                size={16}
+                className="transition-transform duration-300 group-hover/link:translate-x-1"
+              />
+            </a>
+          )}
 
         </div>
 
