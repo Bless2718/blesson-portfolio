@@ -29,5 +29,5 @@ export const siteConfig = {
 
   location: "Thiruvalla, India",
 
-  resume: "/resume/New%20Resume%20(1).pdf",
+  resume: "https://raw.githubusercontent.com/Bless2718/blesson-portfolio/master/public/resume/New%20Resume%20(1).pdf",
 };
