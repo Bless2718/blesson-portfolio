@@ -5,78 +5,54 @@ import ArchitectureCard from "./ArchitectureCard";
 export default function ArchitectureCanvas() {
   return (
     <div className="w-full max-w-3xl">
-
-      {/* Gateway */}
-
       <div className="flex justify-center">
-
         <ArchitectureCard
-          title="AI Gateway"
-          subtitle="Secure API Layer"
+          title="Next.js Dashboard"
+          subtitle="Upload • Explore • Visualize"
         />
-
       </div>
-
-      {/* Line */}
 
       <div className="mx-auto h-12 w-px bg-blue-500/40" />
 
-      {/* Three Services */}
-
       <div className="grid grid-cols-3 gap-6">
-
         <ArchitectureCard
-          title="Document RAG"
-          subtitle="Semantic Search"
+          title="Analytics"
+          subtitle="Dataset Intelligence"
           delay={0.1}
         />
 
         <ArchitectureCard
-          title="SQL Agent"
-          subtitle="Natural Language SQL"
+          title="Forecasting"
+          subtitle="ARIMA • XGBoost"
           delay={0.2}
         />
 
         <ArchitectureCard
-          title="AI Chat"
-          subtitle="Conversational Interface"
+          title="Hotspot Maps"
+          subtitle="Interactive Geospatial Views"
           delay={0.3}
         />
-
       </div>
-
-      {/* Line */}
 
       <div className="mx-auto h-12 w-px bg-blue-500/40" />
 
-      {/* Knowledge */}
-
       <div className="flex justify-center">
-
         <ArchitectureCard
-          title="Knowledge Layer"
-          subtitle="FAISS • PostgreSQL • Redis"
+          title="FastAPI Intelligence Layer"
+          subtitle="Predictions • APIs • Sentinel Chat"
           delay={0.4}
         />
-
       </div>
-
-      {/* Line */}
 
       <div className="mx-auto h-12 w-px bg-blue-500/40" />
 
-      {/* LLM */}
-
       <div className="flex justify-center">
-
         <ArchitectureCard
-          title="LLM Providers"
-          subtitle="OpenAI • Gemini • Claude"
+          title="Data & Model Layer"
+          subtitle="PostgreSQL • Python • Google GenAI"
           delay={0.5}
         />
-
       </div>
-
     </div>
   );
 }
