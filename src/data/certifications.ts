@@ -4,7 +4,7 @@ export interface Certification {
   issuer: string;
   partner?: string;
   duration: string;
-  category: "Featured" | "Cloud" | "Business";
+  category: "Featured" | "Cloud" | "Business" | "AI";
   status: string;
   image: string;
   credential: string;
@@ -56,5 +56,20 @@ export const certifications: Certification[] = [
     featured: false,
     description:
       "Worked on business analysis and process mining concepts using enterprise workflow optimization methodologies.",
+  },
+
+  {
+    id: 4,
+    title: "Generative AI, Deep Learning & Language Models Virtual Internship",
+    issuer: "EduSkills Academy",
+    partner: "AICTE National Internship Portal",
+    duration: "Jun 2026 – Aug 2026",
+    category: "AI",
+    status: "Completed",
+    image: "/certifications/generative-ai-internship.svg",
+    credential: "",
+    featured: false,
+    description:
+      "Completed an 8-week virtual internship focused on Generative AI, Deep Learning and Language Models through EduSkills Academy and the AICTE National Internship Portal.",
   },
 ];
