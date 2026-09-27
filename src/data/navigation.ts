@@ -12,16 +12,15 @@ export const navigation = [
     href: "#skills",
   },
   {
-    name: "Orion AI",
-    href: "#orion",
+    name: "Sentinel AI",
+    href: "#projects",
   },
   {
-    name: "Projects",
-    href: "#projects",
+    name: "Certifications",
+    href: "#certifications",
   },
   {
     name: "Contact",
     href: "#contact",
   },
-
 ];
