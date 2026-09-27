@@ -6,7 +6,7 @@ export const siteConfig = {
   headline: "Engineering Data-Driven Intelligence",
 
   description:
-    "Passionate about building intelligent data platforms,scalable machine learning solutions, enterprise AI systems,and modern analytics applications that solve real-world business problems.",
+    "Data Scientist and Applied Data Science graduate student with hands-on experience in Machine Learning, Generative AI, Large Language Models, Retrieval-Augmented Generation, Data Analytics, and Data Engineering.",
 
   url: "http://localhost:3000",
 
@@ -21,9 +21,13 @@ export const siteConfig = {
 
   github: "https://github.com/Bless2718",
 
-  linkedin: "",
+  linkedin: "https://linkedin.com/in/blesson-samuel-1aa035255",
 
-  email: "",
+  email: "blesson2718@gmail.com",
+
+  phone: "+91 9074526248",
+
+  location: "Thiruvalla, India",
 
   resume: "/resume/Blesson_Samuel_Resume.pdf",
 };
